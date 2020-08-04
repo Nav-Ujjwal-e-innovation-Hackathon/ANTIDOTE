@@ -1,0 +1,98 @@
+{% extends "Modified_files/base.html" %}
+{% load static %}
+
+{% block content-head %}
+<!-- Add Aditional Head Contents -->
+{% endblock %}
+
+{% block content-body %}
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="/index">Muni_Tech</a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li class="active"><a href="/about">About Us</a></li>
+        <li><a href="/contentbox">Content Box</a></li>
+        <!-- <li><a href="#">Link Text</a></li> -->
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+  <div class="wrapper row3">
+    <main class="hoc container clear"> 
+      <!-- main body -->
+      <!-- ################################################################################################ -->
+      <div class="sidebar one_quarter first"> 
+        <!-- ################################################################################################ -->
+        
+        <div class="sdb_holder">
+          <h6>Address</h6>
+          <address>
+          Muni_Tech<br>
+          BIT SINDRI<br>
+          Dhanbad<br>
+          825301<br>
+          <br>
+          Tel: 8294218713<br>
+          Email: <a href="#">munitech@gmail.com</a>
+          </address>
+        </div>
+        
+        <!-- ################################################################################################ -->
+      </div>
+      <!-- ################################################################################################ -->
+      <!-- ################################################################################################ -->
+      <div class="content three_quarter"> 
+        <!-- ################################################################################################ -->
+        <h1>About Us</h1>
+        <img class="imgr borderedbox inspace-5" src="#" alt="">
+        <p>We are a team focussed to create a digital platform which works in real time to aid people and authorities in creating a clean, green and developed India.
+
+            The platform developed by us would work like a tool to help people in sharing the issues directly with the municipal corporation which would be able to locate these issues easily through our platform.
+            
+            This system would also record all the issues for future references.
+            
+            Every individual is invaluable to create a developed locality and a truly self-reliant nation</p>
+        <div class="scrollable">
+          
+        <!-- ################################################################################################ -->
+      </div>
+      <!-- ################################################################################################ -->
+      <!-- / main body -->
+      <div class="clear"></div>
+    </main>
+  </div>
+  <!-- ################################################################################################ -->
+  <div class="wrapper row3">
+    <figure class="hoc container clear clients"> 
+      <!-- ################################################################################################ -->
+      <figcaption class="sectiontitle">
+        <h6 class="heading">Meet Our Team</h6>
+        <p>Be smart, have a plan, than work as hard as you can</p>
+      </figcaption>
+      <ul class="nospace group">
+        <li class="one_quarter first"><a href="#"><img src=" {% static 'images/07.jpg' %} " alt=""></a></li>
+        <li class="one_quarter"><a href="#"><img src=" {% static 'images/08.jpg' %} " alt="" width="690" height="690"></a></li>
+        <li class="one_quarter"><a href="#"><img src=" {% static 'images/06.png' %} " alt=""></a></li>
+        <li class="one_quarter"><a href="#"><img src=" {% static 'images/09.jfif' %} " alt=""></a></li>
+       
+      </ul>
+      <br>
+      <ul class="nospace group">
+        <li class="one_quarter first"><a href="#"><img src=" {% static 'images/10.jpg' %} " alt=""></a></li>
+      </ul>
+      
+      <!-- <br>
+      <div class="group btmspace-50 demo">
+        <div class="one_half first"><a href="#"><img src=" {% static 'images/09.jfif' %} " alt=""></a></div>
+        <div class="one_half"><a href="#"><img src=" {% static 'images/09.jfif' %} " alt=""></a></div>
+      </div> -->
+      <!-- ################################################################################################ -->
+    </figure>
+  </div>
+  
+{% endblock %}

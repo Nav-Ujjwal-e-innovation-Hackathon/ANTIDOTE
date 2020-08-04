@@ -1,0 +1,63 @@
+{% extends "Modified_files/base.html" %}
+{% load static %}
+
+{% block content-head %}
+<!-- Add Aditional Head Contents -->
+{% endblock %}
+
+{% block content-body %}
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <!-- ################################################################################################-->
+    <div id="logo" class="fl_left">
+      <h1><a href="/index">Muni_Tech</a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contentbox">Content Box</a></li>
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+
+{% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show my-0" role="alert">
+        {{ message }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times</span>
+      </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+
+    <div class="container p-3 my-3 border">
+            <div id="comments">
+                    <h2>Register Your Request</h2>
+                    <form action="/upload/" method="post" enctype="multipart/form-data">
+                      {% csrf_token %}
+                      <div class="form-group">
+                        <label for="name">Name</label>
+                          <input name="name" type="text" class="form-control" id="name" placeholder="Your Name here">
+                      </div>
+                      <div class="form-group">
+                        <label for="address"><a href="/location"> Enter Location </a></label>
+                          <input name="address" type="text" class="form-control"  id="address" placeholder="Enter Your Location Here">
+                      </div>
+                      <div class="form-group">
+                        <label for="complain">Your Request In Detail</label>
+                        <textarea name="complain" class="form-control" id="complain" rows="10" placeholder="Please Describe Your Issue In Detail."></textarea>
+                      </div>
+                      <label>Please attach the image of location</label>
+                      <input type="file" name="image">
+                      <br>
+                      <input type="submit" value="Register">
+                    </form>
+            </div>
+      </div>
+
+
+{% endblock %}

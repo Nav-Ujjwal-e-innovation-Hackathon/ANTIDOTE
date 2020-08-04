@@ -1,0 +1,50 @@
+{% extends "Modified_files/base.html" %}
+{% load static %}
+
+{% block content-head %}
+<!-- Add Aditional Head Contents -->
+{% endblock %}
+
+{% block content-body %}
+<div class="wrapper row1">
+  <header id="header" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="/index">Muni_Tech</a></h1>
+    </div>
+    <nav id="mainav" class="fl_right">
+      <ul class="clear">
+        <li><a href="/about">About Us</a></li>
+        <li class="active"><a href="/contentbox">Content Box</a></li>
+        <!-- <li><a href="#">Link Text</a></li> -->
+      </ul>
+    </nav>
+    <!-- ################################################################################################ -->
+  </header>
+</div>
+
+<br><h1 align="center" >Files Uploaded...</h1>
+
+
+<div class="wrapper row3">
+  <figure class="hoc container clear clients">
+    <figcaption class="sectiontitle">
+      <h6 class="heading">Your Complaint</h6>
+    </figcaption>
+    <ul class="nospace group">
+      {% for i in writer %}
+       <p>Before</p>
+       <li class="one_half first"><img src="{{ i.pic.url }}"></li>
+        {{ i.address }}
+        <p>After</p>
+        {% if i.backpic %}
+        <li class="one_half"><img src="{{ i.backpic.url }}"></li>
+        <br>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </figure>
+</div>
+
+{% endblock %}
+
